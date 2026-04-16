@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS - Telemetría de Nodo</title>
+    <style>
+        body { 
+            background: #0a0a0a; 
+            color: #00ff00; 
+            font-family: 'Courier New', Courier, monospace; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+        .panel { 
+            border: 1px solid #003300; 
+            padding: 2rem; 
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.1); 
+            background: rgba(0, 20, 0, 0.5);
+        }
+        .blink { animation: blinker 1.2s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0; } }
+        .data-stream { font-weight: bold; color: #fff; }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <h2>[SISTEMA EN LÍNEA]</h2>
+        <p>Estado del Exocórtex: <span class="blink" style="color: #00ff00;">ACTIVO</span></p>
+        <p>Uso de Memoria (Sim): <span id="mem" class="data-stream">14</span>%</p>
+        <p>Latencia I/O: <span id="ping" class="data-stream">12</span> ms</p>
+    </div>
+    <script>
+        // Mutación asíncrona del DOM para simulación de carga
+        setInterval(() => {
+            document.getElementById('ping').innerText = Math.floor(Math.random() * 15) + 5;
+            document.getElementById('mem').innerText = Math.floor(Math.random() * 5) + 12;
+        }, 1500);
+    </script>
+</body>
+</html>
