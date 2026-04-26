@@ -193,7 +193,7 @@ export function TelemetryDashboard() {
             {/* Top row - KPI cards */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { label: "pH", value: currentPh, unit: "pH", icon: <Droplets className="w-4 h-4" />, color: "text-blue-600", bg: "bg-blue-50", ok: currentPh >= 6.5 && currentPh <= 8.5 },
+                { label: "pH", value: currentPh, unit: "pH", icon: <Droplets className="w-4 h-4" />, color: "text-primary", bg: "bg-primary/10", ok: currentPh >= 6.5 && currentPh <= 8.5 },
                 { label: "Turbidez", value: currentTurb, unit: "NTU", icon: <Waves className="w-4 h-4" />, color: "text-amber-600", bg: "bg-amber-50", ok: currentTurb < 5 },
                 { label: "Conductividad", value: currentCond, unit: "µS/cm", icon: <Activity className="w-4 h-4" />, color: "text-violet-600", bg: "bg-violet-50", ok: currentCond < 300 },
                 { label: "Oxígeno Disuelto", value: currentOd, unit: "mg/L", icon: <Thermometer className="w-4 h-4" />, color: "text-emerald-600", bg: "bg-emerald-50", ok: currentOd >= 6 },

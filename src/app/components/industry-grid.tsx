@@ -29,7 +29,7 @@ const industries: Industry[] = [
     description: "Monitoreo de oxígeno disuelto, turbidez y temperatura en estanques",
     metrics: "80+ proyectos",
     image: "https://images.unsplash.com/photo-1628859742240-269783f56d17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400",
-    color: "bg-blue-50 text-blue-700 border-blue-100",
+    color: "bg-primary/10 text-primary border-primary/20",
   },
   {
     id: 3,
